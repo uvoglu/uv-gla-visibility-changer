@@ -188,7 +188,7 @@ class Uv_Gla_Visibility_Changer_Admin {
 				<h1><?php _e( 'Google Visibility', 'uv-gla-visibility-changer' ) ?></h1>
 				<p class="description">
 					<?php _e( 'Change Google Listings & Ads sync status for multiple products.', 'uv-gla-visibility-changer' ); ?>
-					<?php _e( 'Order is determined in descending order of post IDs.', 'uv-gla-visibility-changer' ); ?>
+					<?php _e( 'Order is determined in ascending order of product titles.', 'uv-gla-visibility-changer' ); ?>
 				</p>
 				<form method="post" action="<?php menu_page_url( 'uv-gla-visibility-changer' ); ?>">
 					<?php wp_nonce_field( 'uv_gla_visibility_data', 'uv_gla_visibility_nonce' ); ?>
