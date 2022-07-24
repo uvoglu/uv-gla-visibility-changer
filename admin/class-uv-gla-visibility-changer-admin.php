@@ -138,7 +138,7 @@ class Uv_Gla_Visibility_Changer_Admin {
 
 		$visibility_post = $this->get_post( 'uv-visibility-type', $this->visibility );
 		$this->visibility = $visibility_post === 'dont-sync-and-show' ? 'dont-sync-and-show' : 'sync-and-show';
-		$this->offset = $this->get_post( 'v-visibility-offset', $this->offset );
+		$this->offset = $this->get_post( 'uv-visibility-offset', $this->offset );
 		$this->count = $this->get_post( 'uv-visibility-count', $this->count);
 
 		$post_ids = $this->query_posts();
