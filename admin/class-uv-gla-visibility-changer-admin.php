@@ -63,7 +63,7 @@ class Uv_Gla_Visibility_Changer_Admin {
 	 */
 	public function load() {
 		// add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_styles' ) );
-		//add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		// add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
 		add_action( 'admin_menu', array( $this, 'uv_add_menu_page' ) );
 	}
@@ -148,8 +148,8 @@ class Uv_Gla_Visibility_Changer_Admin {
 	private function query_posts() {
 		$query = array(
 			'post_type' => 'product',
-			'orderby' => 'ID',
-			'order' => 'DESC',
+			'orderby' => 'title',
+			'order' => 'ASC',
 			'fields' => 'ids',
 			'offset' => $this->offset,
 			'numberposts' => $this->count,
