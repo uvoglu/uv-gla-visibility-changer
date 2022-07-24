@@ -160,7 +160,9 @@ class Uv_Gla_Visibility_Changer_Admin {
 
 	private function update_visibility( $post_ids ) {
 		foreach ( $post_ids as $post_id ) {
-			update_post_meta( $post_id, '_wc_gla_visibility', $this->visibility );
+			if ( metadata_exists( 'post', $post_id, '_wc_gla_visibility' ) ) {
+				update_post_meta( $post_id, '_wc_gla_visibility', $this->visibility );
+			}
 		}
 	}
 
